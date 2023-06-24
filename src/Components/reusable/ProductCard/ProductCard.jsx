@@ -5,18 +5,18 @@ import iconY from '../../../assets/images/dimensions-y-icon.png'
 import layers from '../../../assets/images/layers.png'
 import quantity from '../../../assets/images/quantity.png'
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export const ProductCard = ({data, napkins}) => {
 
     const [selectedSize, setSelectedSize] = useState(0)
-    console.log(data);
 
     return <div className={`${s.cardWrapper}`}>
         <img src={data.image} alt="product" className={s.image} />
         <p className={s.name}>{data.name}</p>
             {napkins ?
                 <div className={s.details}>
-                    <p className={s.dimensions}><img src={iconY} alt="y" />{data.dimensions.y}սմ <img src={iconX} alt="x" /> {data.dimensions.x}սմ</p>
+                    <p className={`${s.dimensions} ${s.selected}`}><img src={iconY} alt="y" />{data.dimensions.y}սմ <img src={iconX} alt="x" /> {data.dimensions.x}սմ</p>
                     <p className={s.layers}><img src={layers} alt="layers icon" />{data.layers} շերտ</p>
                     <p className={s.quantity}><img src={quantity} alt="quantity icon" />{data.pieces} հատ</p>
                 </div>
@@ -28,8 +28,8 @@ export const ProductCard = ({data, napkins}) => {
             </div>
             }
         <div className={s.button}>
-            <SecondaryButton>ՏԵՍՆԵԼ Ավելին</SecondaryButton>
+            <Link to={`./${data.id}`}><SecondaryButton>ՏԵՍՆԵԼ Ավելին</SecondaryButton></Link>
         </div>
-        <p className={data.sterile ? s.sterile : s.sterileHide}>ՍՏԵՐԻԼ</p>
+        <p className={data.sterile ? (napkins ? s.nsterile : s.sterile) : s.sterileHide}>ՍՏԵՐԻԼ</p>
     </div>
 }

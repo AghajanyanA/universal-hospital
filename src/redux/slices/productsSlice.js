@@ -180,7 +180,7 @@ const initialState = {
             },
             
         ],
-        top: [
+        tops: [
             {
                 id: 0,
                 name: 'ԹՈՓԵՐ',

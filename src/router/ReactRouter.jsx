@@ -5,16 +5,24 @@ import { Partners } from "../Components/Pages/4Partners/Partners"
 import { About } from "../Components/Pages/1About/About"
 import { Products } from "../Components/Pages/2Products/Products"
 import { Bandages } from "../Components/Pages/2Products/0Bandages/Bandages"
+import { Tanzif } from "../Components/Pages/2Products/1Tanzif/Tanzif"
+import { Napkins } from "../Components/Pages/2Products/2Napkins/Napkins"
+import { Top } from "../Components/Pages/2Products/3Top/Top"
+import { Detailed } from "../Components/Pages/2Products/Detailed/Detailed"
 
 export const ReactRouter = () => (
         <Routes>
             <Route path="/" element={ <Main /> } />
             <Route path="about" element={ <About /> } />
             <Route path="products" element={ <Products /> }>
-                <Route path="bandages" element={ <Bandages /> } />
-                <Route path="tanzif" element={ <>tanzif</>} />
-                <Route path="napkins" element={ <>napkins</>} />
-                <Route path="top" element={ <>top</>} />
+                <Route path="bandages" element={ <Bandages /> }/>
+                <Route path="tanzif" element={ <Tanzif />} />
+                <Route path="napkins" element={ <Napkins /> } />
+                <Route path="top" element={ <Top /> } />
+                <Route path="bandages/:productID" element={ <Detailed /> } />
+                <Route path="tanzif/:productID" element={ <Detailed /> } />
+                <Route path="napkins/:productID" element={ <Detailed /> } />
+                <Route path="top/:productID" element={ <Detailed /> } />
             </Route>
             <Route path="services" element={ <>gh</> } />
             <Route path="partners" element={ <Partners />} />
