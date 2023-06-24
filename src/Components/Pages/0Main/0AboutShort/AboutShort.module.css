@@ -58,3 +58,9 @@
     width: 35%;
     height: auto;
 }
+
+@media screen and (max-width: 625px) {
+    .topPic {
+        display: none;
+    }
+}
