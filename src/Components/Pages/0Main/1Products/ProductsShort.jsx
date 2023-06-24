@@ -1,9 +1,9 @@
 import { useSelector } from 'react-redux'
-import { Card } from './Card/Card'
 import s from './Products.module.css'
 import { napkinsSelector } from '../../../../helpers/selectors'
 import { DefButton } from '../../../reusable/buttons/DefButton'
 import { Link } from 'react-router-dom'
+import { ProductCard } from '../../../reusable/ProductCard/ProductCard'
 
 export const ProductsShort = () => {
 
@@ -18,7 +18,7 @@ export const ProductsShort = () => {
     return <div className={s.productsShortWrapper}>
         <header>ԱՐՏԱԴՐԱՆՔ</header>
         <div className={s.products}>
-            {_napkins.map(item => <Card data={item} key={item.id} />)}  
+            {_napkins.map(item => <ProductCard data={item} key={item.id} napkins={true} />)}  
         </div>
         <div className={s.seeMore}>
             <Link to='/products'><DefButton>ՏԵՍՆԵԼ ԱՄԲՈՂՋԸ</DefButton></Link>

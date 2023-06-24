@@ -31,10 +31,14 @@
 }
 
 .dimensions {
-    color: #12724F;
-    border: solid #12724F 1px;
+    color: #000000;
+    border: solid #000000 1px;
     border-radius: 14px;
-    padding: 5px;
+    padding: 7px;
+}
+
+.dimensions > img {
+    filter: grayscale(100%);
 }
 
 .layers {
@@ -57,7 +61,7 @@
     width: 110px;
     position: relative;
     left: 311px;
-    top: -418px;
+    top: -83.8%;
     text-align: center;
 }
 
@@ -90,4 +94,16 @@
 
 .sterileHide {
     display: none;
+}
+
+.uni {
+    cursor: pointer;
+}
+
+.selected {
+    color: #12724F;
+    border-color: #12724F;
+}
+.selected > img {
+    filter: grayscale(0%);
 }
