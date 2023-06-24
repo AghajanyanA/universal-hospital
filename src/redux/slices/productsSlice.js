@@ -1,5 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit"
 import bint from '../../assets/images/bint.png'
+import tanzif from '../../assets/images/tanzif.png'
+import top from '../../assets/images/top.png'
 
 const initialState = {
     products: {
@@ -67,7 +69,7 @@ const initialState = {
                         y: 10
                     }
                 ],
-                image: bint,
+                image: tanzif,
                 description: 'lorem'
             }
         ],
@@ -152,7 +154,29 @@ const initialState = {
             },
             
         ],
-        
+        top: [
+            {
+                id: 0,
+                name: 'ԹՈՓԵՐ',
+                sterile: false,
+                sizes: [
+                    {
+                        x: 90,
+                        y: 1000
+                    },
+                    {
+                        x: 90,
+                        y: 2000
+                    },
+                    {
+                        x: 120,
+                        y: 2000
+                    }
+                ],
+                image: top,
+                description: 'lorem'
+            }
+        ]
     }
 }
 
