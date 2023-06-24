@@ -9,10 +9,16 @@ export const ProductsShort = () => {
 
     const napkins = useSelector(napkinsSelector)
 
+    // optimize the following code
+    const _napkins = []
+    for (let i = 0; i < 6; i++) {
+        _napkins.push(napkins[i])
+    }
+
     return <div className={s.productsShortWrapper}>
         <header>ԱՐՏԱԴՐԱՆՔ</header>
         <div className={s.products}>
-            {napkins.map(item => <Card data={item} key={item.id} />)}  
+            {_napkins.map(item => <Card data={item} key={item.id} />)}  
         </div>
         <div className={s.seeMore}>
             <Link to='/products'><DefButton>ՏԵՍՆԵԼ ԱՄԲՈՂՋԸ</DefButton></Link>
