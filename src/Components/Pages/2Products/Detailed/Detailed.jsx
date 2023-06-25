@@ -9,8 +9,10 @@ export const Detailed = () => {
     const products = useSelector(productsSelector)
     const product = products[category].find(ob => ob.id === +productID)
 
+    console.log(product)
+
 
     return <div className={s.wrapper}>
-        
+
         </div>
 }
