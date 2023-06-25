@@ -9,6 +9,7 @@ import { Tanzif } from "../Components/Pages/2Products/1Tanzif/Tanzif"
 import { Napkins } from "../Components/Pages/2Products/2Napkins/Napkins"
 import { Top } from "../Components/Pages/2Products/3Top/Top"
 import { Detailed } from "../Components/Pages/2Products/Detailed/Detailed"
+import { Services } from "../Components/Pages/3Services/Services"
 
 export const ReactRouter = () => (
         <Routes>
@@ -21,7 +22,7 @@ export const ReactRouter = () => (
                 <Route path="tops" element={ <Top /> } />
                 <Route path=":category/:productID" element={ <Detailed /> } />
             </Route>
-            <Route path="services" element={ <>gh</> } />
+            <Route path="services" element={ <Services /> } />
             <Route path="partners" element={ <Partners />} />
             <Route path="contact" element={ <ContactShort /> } />
         </Routes>
