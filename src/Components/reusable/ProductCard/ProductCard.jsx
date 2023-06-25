@@ -7,7 +7,7 @@ import quantity from '../../../assets/images/quantity.png'
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-export const ProductCard = ({data, napkins}) => {
+export const ProductCard = ({data, napkins, mainPage = false}) => {
 
     const [selectedSize, setSelectedSize] = useState(0)
 
@@ -28,7 +28,7 @@ export const ProductCard = ({data, napkins}) => {
             </div>
             }
         <div className={s.button}>
-            <Link to={`./${data.id}`}><SecondaryButton>ՏԵՍՆԵԼ Ավելին</SecondaryButton></Link>
+            <Link to={`./${mainPage ? 'napkins/' : ''}${data.id}`}><SecondaryButton>ՏԵՍՆԵԼ Ավելին</SecondaryButton></Link>
         </div>
         <p className={data.sterile ? (napkins ? s.nsterile : s.sterile) : s.sterileHide}>ՍՏԵՐԻԼ</p>
     </div>

@@ -18,7 +18,7 @@ export const ReactRouter = () => (
                 <Route path="bandages" element={ <Bandages /> }/>
                 <Route path="tanzif" element={ <Tanzif />} />
                 <Route path="napkins" element={ <Napkins /> } />
-                <Route path="top" element={ <Top /> } />
+                <Route path="tops" element={ <Top /> } />
                 <Route path=":category/:productID" element={ <Detailed /> } />
             </Route>
             <Route path="services" element={ <>gh</> } />

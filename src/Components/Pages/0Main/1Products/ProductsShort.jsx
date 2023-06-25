@@ -18,10 +18,10 @@ export const ProductsShort = () => {
     return <div className={s.productsShortWrapper}>
         <header>ԱՐՏԱԴՐԱՆՔ</header>
         <div className={s.products}>
-            {_napkins.map(item => <ProductCard data={item} key={item.id} napkins={true} />)}  
+            {_napkins.map(item => <ProductCard data={item} key={item.id} napkins={true} mainPage={true} />)}  
         </div>
         <div className={s.seeMore}>
-            <Link to='/products'><DefButton>ՏԵՍՆԵԼ ԱՄԲՈՂՋԸ</DefButton></Link>
+            <Link to='/products/'><DefButton>ՏԵՍՆԵԼ ԱՄԲՈՂՋԸ</DefButton></Link>
         </div>
     </div>
 }

@@ -14,7 +14,7 @@ export const Products = () => {
             <NavLink className={({ isActive }) => isActive ? s.active : ''} to='./bandages'>Բինտեր</NavLink>
             <NavLink className={({ isActive }) => isActive ? s.active : ''} to='./tanzif'>թանզիֆՆԵՐ</NavLink>
             <NavLink className={({ isActive }) => isActive ? s.active : ''} to='./napkins'>անձեռոցիկներ</NavLink>
-            <NavLink className={({ isActive }) => isActive ? s.active : ''} to='./top'>ԹՈՓԵՐ</NavLink>
+            <NavLink className={({ isActive }) => isActive ? s.active : ''} to='./tops'>ԹՈՓԵՐ</NavLink>
         </div>
         <Outlet />
     </>
