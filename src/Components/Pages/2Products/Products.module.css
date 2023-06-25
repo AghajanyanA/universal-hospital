@@ -16,3 +16,11 @@
 .active {
     color: #12724F !important;
 }
+
+@media screen and (max-width: 910px) {
+    .navlinks {
+        flex-direction: column;  
+}
+
+    
+}
