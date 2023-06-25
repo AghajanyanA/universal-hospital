@@ -5,7 +5,7 @@ import { useEffect } from 'react'
 export const Products = () => {
 
     const nav = useNavigate()
-
+    // TODO: clicking products second time in a row doesn't redirect anymore
     useEffect(() => {
         nav('./bandages')
     }, []) //eslint-disable-line

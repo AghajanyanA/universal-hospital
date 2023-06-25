@@ -60,7 +60,7 @@
     transform: rotate(45deg);
     width: 110px;
     position: relative;
-    left: 311px;
+    left: 71.6%;
     top: -83.8%;
     text-align: center;
 }
@@ -75,7 +75,7 @@
     border-color: #12724F transparent transparent transparent;
     position: absolute;
     right: -24px;
-    bottom: -3px;     
+    bottom: -3px;  
 }
 
 .sterile::after {
@@ -91,6 +91,8 @@
     bottom: -3px;
 }
 
+/* for napkin */
+
 .nsterile {
     color: #FFFFFF;
     font-size: 14px;
@@ -101,7 +103,7 @@
     transform: rotate(45deg);
     width: 110px;
     position: relative;
-    left: 311px;
+    left: 71.6%;
     top: -87.7%;
     text-align: center;
 }
@@ -147,4 +149,22 @@
 }
 .selected > img {
     filter: grayscale(0%);
+}
+
+
+
+@media screen and (max-width: 450px) {
+    .cardWrapper {
+        width: 80%;
+        /* margin-top: 96px; */
+        /* margin-left: 34px; */
+    }
+    .image {
+        width: 80%;
+    }
+    .sterile, .nsterile {
+        width: 28%;
+        left: 67.5%;
+    }
+    
 }
