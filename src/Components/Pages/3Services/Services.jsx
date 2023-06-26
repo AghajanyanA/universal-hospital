@@ -64,7 +64,7 @@ export const Services = () => {
                     <input type="text" className={s.input} placeholder='Անուն' value={orderInputs.name} onChange={handleNameChange} />
                     <input type="text" className={s.input} placeholder='Ազգանուն' value={orderInputs.lastName} onChange={handleLastNameChange} />
                 </div>
-                <input type="text" className={s.input} placeholder='Հեռախեսահամար' value={orderInputs.number} onChange={handleNumberChange} />
+                <input type="tel" className={s.input} placeholder='Հեռախեսահամար' value={orderInputs.number} onChange={handleNumberChange} />
                 <textarea className={s.input} placeholder='Ծառայության անվանումը' value={orderInputs.message} onChange={handleMessageChange} />
                 <input type="submit" className={s.sbtn} value='ՊԱՏՎԻՐԵԼ' />
             </form>
